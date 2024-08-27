@@ -1,13 +1,19 @@
-import React from 'react';
-
-const Button = ({
+interface ButtonProps {
+  label: string;
+  iconURL?: string;
+  backgroundColor?: string;
+  textColor?: string;
+  borderColor?: string;
+  fullWidth?: boolean;
+}
+export default function Button({
   label,
   iconURL,
   backgroundColor,
   textColor,
   borderColor,
   fullWidth,
-}) => {
+}: ButtonProps) {
   return (
     <button
       className={`flex justify-center items-center gap-2 
@@ -28,6 +34,4 @@ const Button = ({
       )}
     </button>
   );
-};
-
-export default Button;
+}

@@ -1,6 +1,13 @@
-import React from 'react';
-
-const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
+interface ShoeCardProps {
+  imgURL: any;
+  changeBigShoeImage: any;
+  bigShoeImg: any;
+}
+export default function ShoeCard({
+  imgURL,
+  changeBigShoeImage,
+  bigShoeImg,
+}: ShoeCardProps) {
   const handleClick = () => {
     if (bigShoeImg !== imgURL.bigShoe) {
       changeBigShoeImage(imgURL.bigShoe);
@@ -29,6 +36,4 @@ const ShoeCard = ({ imgURL, changeBigShoeImage, bigShoeImg }) => {
       </div>
     </div>
   );
-};
-
-export default ShoeCard;
+}

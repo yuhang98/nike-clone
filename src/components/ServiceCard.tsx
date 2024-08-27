@@ -1,6 +1,13 @@
-import React from 'react';
-
-const ServiceCard = ({ imgURL, label, subtext }) => {
+interface ServiceCardProps {
+  imgURL: string;
+  label: string;
+  subtext: string;
+}
+export default function ServiceCard({
+  imgURL,
+  label,
+  subtext,
+}: ServiceCardProps) {
   return (
     <div
       className="flex-1 sm:w-[350px] sm:min-w-[350px] 
@@ -26,6 +33,4 @@ const ServiceCard = ({ imgURL, label, subtext }) => {
       </p>
     </div>
   );
-};
-
-export default ServiceCard;
+}
